@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+        <title>Registro</title>
+</head>
+    <body>
+<body>
+  <div>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid"> <a class="navbar-brand" href="#">Clínica Vet</a> <button class="navbar-toggler"
+          type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html">Início</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#sobre">Sobre Nós</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#contato">Contato</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="cadastro.html">Cadastro</a> </li>
+          </ul>
+          <form class="d-flex" role="search"> <input class="form-control me-2" type="search" placeholder="Pesquisar"
+              aria-label="Search" /> <button class="btn btn-outline-success" type="submit">Buscar</button> </form>
+        </div>
+      </div>
+    </nav>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Cadastro de Usuário</h2>
+
+            <form id="FormCadastro" class="row g-3">
+                <input type="hidden" id="cadastroId">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Nome completo">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" id="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-md-6">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="text" id="Telefone" class="form-control" placeholder="(xx) xxxxx-xxxx">
+                </div>
+                <div class="col-md-6">
+                    <label for="pet" class="form-label">Nome do Pet</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Nome do pet">
+                </div>
+
+                <div class=""col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                </div>
+            </form>
+
+            <!-- Tabela -->
+    <h3 class="text-center mt-5">Lista de Cadastros</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Pet</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody id="listaCadastros">
+                <!-- preenchido via JS-->
+            </tbody>
+        </table>
+        <footer class="bg-dark text-while text-center py-3">
+            <p>Desenvolvido por <strong>Ziul</strong>&copy; 2025 </p>
+        </footer>
+    <script src="cadastro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    </div>
+    </body>
+</html>
