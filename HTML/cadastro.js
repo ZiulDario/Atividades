@@ -9,7 +9,9 @@ const inputPet = document.getElementById("pet");
 const inputTele = document.getElementById("telefone");
 const inputEmail = document.getElementById("email");
 
-form.addEventListener("submit", (e) => {
+const API_URL = "http://localhost:3000/clientes";
+
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const id = inputId.value;
@@ -22,31 +24,31 @@ form.addEventListener("submit", (e) => {
         alert("Preencha todos os campos !");
         return;
     }
+    const dados = {nome, pet, telefone, email};
     if (id){
-        const cadastro = cadastros.find(c => c.id == id);
-        cadastro.nome = nome;
-        cadastro.pet = pet;
-        cadastro.telefone = telefone;
-        cadastro.email = email;
-        inputId.value= "";
-
+        await fetch(`${API_URL}/${id}`, {
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(dados),
+        });
+        input.Id.value = "";
     }else {
-        const novoCadastro = {
-            id: Date.now(),
-            nome,
-            pet,
-            telefone,
-            email
-        };
-        cadastros.push(novoCadastro);
-    }
-
+        await fetch(API_URL, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(dados),
+        });
+    };
     form.reset();
     renderCadastros();
 });
 
-function renderCadastros(){
+async function renderCadastros(){
     lista.innerHTML = "";
+    const resp = await fetch(API_URL);
+    const cadastros = await resp.json();
+
+
     cadastros.forEach((c) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
@@ -64,7 +66,10 @@ function renderCadastros(){
     });
 }
 
-function editarCadastro(id){
+async function editarCadastro(id){
+    const resp = await fetch(`${API_URL}`);
+    const cadastros = await resp.json();
+
     const cadastro = cadastros.find(c => c.id == id);
     inputId.value = cadastro.id
     inputNome.value = cadastro.nome;
@@ -73,7 +78,8 @@ function editarCadastro(id){
     inputEmail.value = cadastro.email;
 }
 
-function deletarCadastro(id){
-    cadastro = cadastros.filter(c => c.id !== id);
+async function deletarCadastro(id){
+    await fetch(`${API_URL}/${id}`, {method: "DELETE"});
     renderCadastros();
 }
+document.addEventListener("DOMContentLoaded", renderCadastros);
