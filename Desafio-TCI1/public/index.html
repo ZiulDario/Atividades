@@ -15,11 +15,15 @@
         <form action="/login" method="POST">
           <div class="mb-3">
             <label class="form-label">Usuário</label>
-            <input type="text" name="username" class="form-control" required>
+            <input type="text" name="username" class="form-control" placeholder="Nome de usuário">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" name="email" class="form-control" placeholder="seuemail@exemplo.com">
           </div>
           <div class="mb-3">
             <label class="form-label">Senha</label>
-            <input type="password" name="password" class="form-control" required>
+            <input type="password" name="password" class="form-control" placeholder="********">
           </div>
           <button type="submit" class="btn btn-primary w-100">Entrar</button>
         </form>
