@@ -9,18 +9,43 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+
+    <!-- Navbar -->
    <header>
     <div class="logo">Auris</div>
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
             <li><a href="#contato">Contato</a></li>
-        </ul>
+            <li><a href="Cadastro.html">Cadastre-se</a></li>
+            <li><a href="Login.html">Login</a></li></ul>
     </nav>
    </header>
 
+   <!-- Pulseira -->
+   <main class="container">
+        <div class="tech-circle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="list">
+            <div class="item active">
+                <div class="pulser-img">
+                    <img src="./images/pulseira.png" alt="Pulseira Aurius">
+                </div>
+                <div class="content">
+                    <p class="product-tag">Novo Lançamento</p>
+                    <p class="product-name">Pulseira Auris</p>
+                    <p class="description">A pulseira inovadora que oferece ajuda e transmite um sinal para socorrer o idoso. Nosso produto foi projetados com a mais alta qualidade e "tecnologia de ponta".</p>
+                    <button class="glow-on-hover" type="button">Saiba Mais</button>
+                </div>    
+            </div>
+        </div>
+
+   <!-- Carrossel -->
    <div class="carousel-container">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
@@ -50,28 +75,77 @@
       </div>
    </div>
 
-   <main class="container">
-        <div class="tech-circle">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
+    <main>
+        <section class="slide-section">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1" checked>
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
 
-        <div class="list">
-            <div class="item active">
-                <div class="pulser-img">
-                    <img src="./images/apple-watch.png" alt="Pulseira Aurius">
+                    <div class="slide first">
+                        <img src="images/idoso1.jpg" alt="Idoso usando a pulseira Aurius">
+                    </div>
+                    <div class="slide">
+                        <img src="images/idoso2.jpg" alt="Cuidadora recebendo alerta no celular">
+                    </div>
+                    <div class="slide">
+                        <img src="images/idoso3.jpg" alt="Equipe de suporte da Aurius">
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
                 </div>
-                <div class="content">
-                    <p class="product-tag">Novo Lançamento</p>
-                    <p class="product-name">Pulseira Auris</p>
-                    <p class="description">A pulseira inovadora que oferece ajuda e transmite um sinal para socorrer o idoso. Nosso produto foi projetados com a mais alta qualidade e "tecnologia de ponta".</p>
-                    <button class="glow-on-hover" type="button">Saiba Mais</button>
-                </div>    
+
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+
+        <div class="cards-container">
+
+            <div class="card">
+                <h3></h3>
+                <p>
+                </p>
+            </div>
+
+            <div class="card">
+                <h3></h3>
+                <p></p>
+            </div>
+
+            <div class="card">
+                <h3></h3>
+                <p></p>
             </div>
 
         </div>
+
+
+        <section id="servicos" class="servicos">
+            <div class="cards">
+                <div class="card">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    <script src="./script.js"></script>
    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
