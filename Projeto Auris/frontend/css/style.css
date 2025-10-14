@@ -436,6 +436,8 @@ section {
     object-fit: cover;
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    border: 4px solid #85d7f5; /* mesma cor da pulseira */
+    filter: drop-shadow(0 0 20px #00AEEF); /* igual pulseira.png */
 }
 
 @media (max-width: 900px) {
