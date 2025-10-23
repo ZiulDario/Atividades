@@ -83,7 +83,7 @@ body {
   width: 100%;
   padding: 12px 20px;
   background: transparent;
-  border: 2px solid #90ddfc;
+  border: 2px solid #88ddff;
   border-radius: 40px;
   font-size: 1.2em;
   color: #ffffff;
@@ -93,7 +93,7 @@ body {
 .login .inputBx input[type="submit"] {
   width: 100%;
   background: #0078ff;
-  background: linear-gradient(45deg, #c8d4e2, #97bde9);
+  background: linear-gradient(45deg, #57a3fa, #e3f115);
   border: none;
   cursor: pointer;
 }
