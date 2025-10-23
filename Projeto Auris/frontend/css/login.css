@@ -83,7 +83,7 @@ body {
   width: 100%;
   padding: 12px 20px;
   background: transparent;
-  border: 2px solid #74d8ff;
+  border: 2px solid #90ddfc;
   border-radius: 40px;
   font-size: 1.2em;
   color: #ffffff;
@@ -93,12 +93,12 @@ body {
 .login .inputBx input[type="submit"] {
   width: 100%;
   background: #0078ff;
-  background: linear-gradient(45deg, #6da9f7, #abd0ff);
+  background: linear-gradient(45deg, #d3e6ff, #b7d7ff);
   border: none;
   cursor: pointer;
 }
 .login .inputBx input::placeholder {
-  color: #a8cbff(255, 255, 255, 0.75);
+  color: #eef5ff(255, 255, 255, 0.75);
 }
 .login .links {
   position: relative;
